@@ -26,3 +26,4 @@ student.takeExam();
 const remaining1 = student.treatDey(900, 100);
 const remaining2 = student.treatDey(500, 50);
 console.log(remaining2);
+//object er vitore func likha ke method bole
