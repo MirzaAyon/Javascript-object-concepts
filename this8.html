@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>What is this</h1>
+    <input onkeydown="console.log(this)" type="text"> <!-- ekhn input e kichu likhle -->
+    <button onclick="console.log(this)">click me</button>
+    <!-- input  e type korle console.log hbe -->
+    <script>
+        const kibria = {
+            id: 101,
+            money: 5000,
+            name: 'RJ Kibria',
+            treatDeyArrow: () => {
+                console.log(this);
+            }, //important notes khatae
+            treatDeyInside: function () {
+                const myArrow = () => console.log(this);
+                myArrow();
+            },
+            treatDey: function (expense) {
+                this.money = this.money - expense;
+                console.log('here5555', this);
+                return this.money;
+            }
+        }
+        const heroBalam = {
+            id: 102,
+            money: 6000,
+            name: 'Hero Balam'
+        }
+        function add() {
+            console.log(this);
+        }//ekhn inspact e joto bar likhbo toto bar e new new window add hbe 
+    </script>
+</body>
+
+</html>
+<!--
+1.this execution context - kar upr execute hoche shetar upr depend krbe
+2.regular method hole baam pashe je ache shetake context hbe 
+3.arrow func hole uporer level onushare context hbe
+4.dom er element e click korle shei event tai this bujhabe
+5.dom er element er event ta kono enent handler hole(ja pore execute hbe) tahole func ta calling er upr depend korbe
+6.this er value onek beshi change hoy, execution er upr depend kore, arrow func er nijesho this value ke she create korte parena normal func pare
+7.arrow func tar uporer level er this take mone rakhe
+
+
+
+-->

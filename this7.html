@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>What is this</h1>
+    <input onkeydown="console.log(this)" type="text"> <!-- ekhn input e kichu likhle -->
+    <button onclick="console.log(this)">click me</button>
+    <!-- input  e type korle console.log hbe -->
+    <script>
+        const kibria = {
+            id: 101,
+            money: 5000,
+            name: 'RJ Kibria',
+            treatDeyArrow: () => {
+                console.log(this);
+            }, //important notes khatae
+            treatDey: function (expense) {
+                this.money = this.money - expense;
+                console.log('here5555', this);
+                return this.money;
+            }
+        }
+        const heroBalam = {
+            id: 102,
+            money: 6000,
+            name: 'Hero Balam'
+        }
+        function add() {
+            console.log(this);
+        }//ekhn inspact e joto bar likhbo toto bar e new new window add hbe 
+    </script>
+</body>
+
+</html>

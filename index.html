@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What the hell is this</title>
+</head>
+
+<body>
+    <h2>What is this!</h2>
+    <script>
+        // console.log(this); //inspact check this means window
+        //js er shob kichu ei window er mdohe ache
+        //browser e hoy - window.console.log
+        //window.document.getEle
+
+        const kibria = {
+            id: 101,
+            money: 5000,
+            name: 'RJ Kibria',
+            treatDey: function (expense) {
+                this.money = this.money - expense;
+                console.log('here5555', this);
+                return this.money;
+            }
+        } //browser e giye shorashori kibria likhe enter dibo erpr kibria.treatDey() , kibria.treatDey(500)
+        //func call er shomoy dot er baame je thakbe take call hbe r dot er bame jodi keo na thake tahole window call hbe
+        function add(a, b) {
+            console.log(this); //window call hbe 
+        }
+    </script>
+    this holo execution context , kaar upr execution hbe shetar upr depend korbe
+</body>
+
+
+</html>
